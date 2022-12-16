@@ -303,9 +303,9 @@ func (s *Service) checkBannerAndSlotAndSocialGroupExists(ctx context.Context, ba
 	return nil
 }
 
-func (s *Service) AddClick(ctx context.Context, bannerID, slotID, socialGroupID *uuid.UUID) (err error) {
+func (s *Service) AddClick(ctx context.Context, bannerID, slotID, socialGroupID *uuid.UUID) error {
 
-	err = s.checkBannerAndSlotAndSocialGroupExists(ctx, bannerID, slotID, socialGroupID)
+	err := s.checkBannerAndSlotAndSocialGroupExists(ctx, bannerID, slotID, socialGroupID)
 	if err != nil {
 		return err
 	}
